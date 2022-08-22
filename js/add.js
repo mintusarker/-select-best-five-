@@ -6,11 +6,9 @@ function display (cartPlayer){
 console.log(cartPlayer);
 const tableBody = document.getElementById('cart-players');
 tableBody.innerHTML = '';
+
 for(let i = 0; i < cartPlayer.length; i++){
-
-    // console.log(cartArray[i].playerName);
-
-    const name = cartArray[i].playerName;
+   const name = cartArray[i].playerName;
     const tr = document.createElement('tr');
 
     tr.innerHTML = `
@@ -21,9 +19,6 @@ for(let i = 0; i < cartPlayer.length; i++){
 }
 
 }
-
-
-
 
 function addToCart (element){
     // console.log(element.parentNode.parentNode.children[0].innerText)

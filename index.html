@@ -10,17 +10,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="">
+  <!-- header -->
     <header class="">
          <div id="banner" class="h-80 bg-slate-700 pt-10 align-middle">
          <h1 class="pt-10 text-center text-red-400 text-5xl ">Choose Best Five Players</h1>
          <p class="text-center p-4 text-white">Football is the world's most popular ball game in numbers of participants <br> and spectators. Simple in its principal rules and essential equipment.</p>
         </div>
     </header>
-
-    <section>
-
+<!-- player section -->
+<section>
   <div class="flex gap-10 ml-48 mb-40">
-
     <div class="grid grid-cols-3 mt-20 gap-8">
       <div class="w-64 bg-black shadow-xl">
           <figure><img class="w-full h-56" src="images/LionelMessi.jpg" alt=""></figure>
@@ -42,7 +41,8 @@
               <button class="w-48 h-10 bg-blue-600 text-white" onclick="addToCart(this)">SELECT</button>
             </div>
           </div>
-        </div>  
+        </div> 
+
       <div class="w-64 bg-black shadow-xl">
           <figure><img class="w-full h-56" src="images/Kylian-Mbappe-4.jpeg" alt="" /></figure>
           <div class="card-body">
@@ -52,7 +52,8 @@
               <button class="w-48 h-10 bg-blue-600 text-white" onclick="addToCart(this)">SELECT</button>
             </div>
           </div>
-        </div>  
+        </div> 
+
       <div class="w-64 bg-black shadow-xl">
           <figure><img class="w-full h-56" src="images/c.ronaldo.jpg" alt="" /></figure>
           <div class="card-body">
@@ -62,7 +63,8 @@
               <button class="w-48 h-10 bg-blue-600 text-white" onclick="addToCart(this)">SELECT</button>
             </div>
           </div>
-        </div>  
+        </div> 
+
       <div class="w-64 bg-black shadow-xl">
           <figure><img class="w-full h-56" src="images/angel di mariya.jpg" alt="" /></figure>
           <div class="card-body">
@@ -72,7 +74,8 @@
               <button class="w-48 h-10 bg-blue-600 text-white" onclick="addToCart(this)">SELECT</button>
             </div>
           </div>
-        </div>  
+        </div> 
+
       <div class="w-64 bg-black shadow-xl">
           <figure><img  class="w-full h-56" src="images/vitor-machado-ferreira.jpg" alt="Shoes" /></figure>
           <div class="card-body">
@@ -83,17 +86,14 @@
             </div>
           </div>
         </div>  
-
     </div>
 
     <div>
+      <!-- selection  -->
       <div class="w-72 shadow-xl bg-black ml-8 mt-20 mb-8">
          <h2 class="text-white text-center text-2xl font-semibold p-4">Selected-V <span class="text-blue-400" id="total-added-player">0</span></h2>
-
-
          <div class="overflow-x-auto">
           <table class="table table-zebra w-full">
-            <!-- head -->
             <thead>
               <tr>
                 <th>Number</th>
@@ -101,21 +101,16 @@
               </tr>
             </thead>
             <tbody id="cart-players">
-
           <!-- <tr>
                 <th>1</th>
                 <td>name</td>
                 <td>400</td>
-              </tr> -->
-             
+              </tr> -->            
             </tbody>
           </table>
         </div>
-
-
-
-        </div>
-
+      </div>
+<!-- calculation -->
       <div class="w-72 shadow-xl text-white bg-black ml-8">
         <h1 class="text-center text-white font-semibold text-2xl p-4">Budget</h1>
        <div class="mt-8">
@@ -123,29 +118,27 @@
        </div>
             <div class="text-center"> 
               <button class="w-48 mt-6 h-10 bg-blue-600 text-white" id="btn-calculate">CALCULATE</button>
-            </div>
-
-            
-            <div class="inline-flex mx-8 mt-3 text-xl gap-32">
+           </div>           
+           <div class="inline-flex mx-8 mt-3 text-xl gap-32">
               <div><h1>Total</h1></div>
               <div>$<span id="player-total">00</span></div>
             </div>
 
             <h4></h4>
            <div class="mt-12">
-              <p class="ml-4">Manager : <input class="w-32 h-10 ml-12 bg-black border" type="text"> </p>
+              <p class="ml-4">Manager : <input id="manager-input" class="w-32 h-10 ml-12 bg-black border" type="text"> </p>
              </div>
 
              <div class="mt-8">
-              <p class="ml-5">Coach : <input class="w-32 bg-black border h-10 ml-16" type="text"> </p>
+              <p class="ml-5">Coach : <input id="coach-input" class="w-32 bg-black border h-10 ml-16" type="text"> </p>
              </div>
 
             <div class="text-center"> 
-              <button class="w-48 h-10 mt-6 bg-blue-600 text-white">Calculate Total</button> 
+              <button id="btn-total" class="w-48 h-10 mt-6 bg-blue-600 text-white">Calculate Total</button> 
 
               <div class="inline-flex my-8 text-xl gap-32">
                 <div><h1>Total</h1></div>
-                <div class="text-orange-400">$<span>11000</span></div>
+                <div class="text-orange-400">$<span id="total-cost">00</span></div>
               </div>
             </div>
           </div>
