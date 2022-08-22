@@ -28,7 +28,7 @@
             <h2 class="text-center text-xl text-white font-semibold">Lionel Messi</h2>                
            <p class="text-center text-white"><span>36 Goals</span> <span class="text-3xl">.</span> <span>120 Assist</span> </p>
             <div class="text-center"> 
-              <button class="w-48 h-10 bg-blue-600 text-white">SELECT</button>
+              <button class="w-48 h-10 bg-blue-600 text-white" onclick="addToCart(this)">SELECT</button>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
             <h2 class="text-center text-white text-xl font-semibold">Neymar Jr</h2>                
            <p class="text-center text-white"><span>35 Goals</span> <span class="text-3xl">.</span> <span>119 Assist</span> </p>
             <div class="text-center"> 
-              <button class="w-48 h-10 bg-blue-600 text-white">SELECT</button>
+              <button class="w-48 h-10 bg-blue-600 text-white" onclick="addToCart(this)">SELECT</button>
             </div>
           </div>
         </div>  
@@ -49,7 +49,7 @@
             <h2 class="text-center text-white text-xl font-semibold">Kylian Mbappe</h2>                
            <p class="text-center text-white"><span>36 Goals</span> <span class="text-3xl">.</span> <span>120 Assist</span> </p>
             <div class="text-center"> 
-              <button class="w-48 h-10 bg-blue-600 text-white">SELECT</button>
+              <button class="w-48 h-10 bg-blue-600 text-white" onclick="addToCart(this)">SELECT</button>
             </div>
           </div>
         </div>  
@@ -59,7 +59,7 @@
             <h2 class="text-center text-white text-xl font-semibold">Cristiano Ronaldo</h2>                
            <p class="text-center text-white"><span>36 Goals</span> <span class="text-3xl">.</span> <span>120 Assist</span> </p>
             <div class="text-center"> 
-              <button class="w-48 h-10 bg-blue-600 text-white">SELECT</button>
+              <button class="w-48 h-10 bg-blue-600 text-white" onclick="addToCart(this)">SELECT</button>
             </div>
           </div>
         </div>  
@@ -69,7 +69,7 @@
             <h2 class="text-center text-white text-xl font-semibold">Angel Di Maria</h2>                
            <p class="text-center text-white"><span>36 Goals</span> <span class="text-3xl">.</span> <span>120 Assist</span> </p>
             <div class="text-center"> 
-              <button class="w-48 h-10 bg-blue-600 text-white">SELECT</button>
+              <button class="w-48 h-10 bg-blue-600 text-white" onclick="addToCart(this)">SELECT</button>
             </div>
           </div>
         </div>  
@@ -79,7 +79,7 @@
             <h2 class="text-center text-white text-xl font-semibold">Vitor Machado</h2>                
            <p class="text-center text-white"><span>36 Goals</span> <span class="text-3xl">.</span> <span>120 Assist</span> </p>
             <div class="text-center"> 
-              <button class="w-48 h-10 bg-blue-600 text-white">SELECT</button>
+              <button class="w-48 h-10 bg-blue-600 text-white" onclick="addToCart(this)">SELECT</button>
             </div>
           </div>
         </div>  
@@ -87,23 +87,48 @@
     </div>
 
     <div>
-      <div class="w-72 shadow-xl h-72 bg-black ml-8 mt-20 mb-8">
-         <h1 class="text-white text-center text-2xl font-semibold p-4">Selected-V</h1>
+      <div class="w-72 shadow-xl bg-black ml-8 mt-20 mb-8">
+         <h2 class="text-white text-center text-2xl font-semibold p-4">Selected-V <span class="text-blue-400" id="total-added-player">0</span></h2>
+
+
+         <div class="overflow-x-auto">
+          <table class="table table-zebra w-full">
+            <!-- head -->
+            <thead>
+              <tr>
+                <th>Number</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody id="cart-players">
+
+          <!-- <tr>
+                <th>1</th>
+                <td>name</td>
+                <td>400</td>
+              </tr> -->
+             
+            </tbody>
+          </table>
+        </div>
+
+
+
         </div>
 
       <div class="w-72 shadow-xl text-white bg-black ml-8">
         <h1 class="text-center text-white font-semibold text-2xl p-4">Budget</h1>
        <div class="mt-8">
-        <p class="ml-4">Per player : <input class="w-32 bg-black border h-10 ml-10" type="text"> </p>
+        <p class="ml-4">Per player : <input id="player-input" class="w-32 bg-black border h-10 ml-10" type="text"> </p>
        </div>
             <div class="text-center"> 
-              <button class="w-48 mt-6 h-10 bg-blue-600 text-white">Calculate</button>
+              <button class="w-48 mt-6 h-10 bg-blue-600 text-white" id="btn-calculate">CALCULATE</button>
             </div>
 
             
             <div class="inline-flex mx-8 mt-3 text-xl gap-32">
               <div><h1>Total</h1></div>
-              <div>$<span>00</span></div>
+              <div>$<span id="player-total">00</span></div>
             </div>
 
             <h4></h4>
@@ -138,3 +163,4 @@
  <script src="js/money.js"></script>
 </body>
 </html>
+
