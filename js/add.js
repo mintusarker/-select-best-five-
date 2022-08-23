@@ -3,7 +3,7 @@ const cartArray = [];
 
 function display (cartPlayer){
 
-console.log(cartPlayer);
+// console.log(cartPlayer);
 const tableBody = document.getElementById('cart-players');
 tableBody.innerHTML = '';
 
@@ -18,23 +18,25 @@ for(let i = 0; i < cartPlayer.length; i++){
     tableBody.appendChild(tr)
 }
 
-}
+};
 
-function addToCart (element){
-    // console.log(element.parentNode.parentNode.children[0].innerText)
 
+function addToCart (element){ 
     const playerName = element.parentNode.parentNode.children[0].innerText;
-    // console.log(playerName)
-
+    // console.log(playerName) 
     const playerObj = {
         playerName: playerName
-     }
+     }  
+     cartArray.push(playerObj)
+     // console.log(cartArray.length)    
+     document.getElementById('total-added-player').innerText = cartArray.length;
+     
+     display(cartArray);
 
-    cartArray.push(playerObj)
-
-    // console.log(cartArray.length)
-
-    document.getElementById('total-added-player').innerText = cartArray.length;
+   
     
-    display(cartArray);
+    // const btn = document.getElementById('btn-disabled1')
+    // btn.disabled = true;
+    // btn.style.background = '#777'
 }
+
