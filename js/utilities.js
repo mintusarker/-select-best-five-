@@ -5,7 +5,7 @@ function getInputFieldValueById(inputFieldId){
     const inputFieldValueString = inputField.value;
     const inputFieldValue = parseFloat(inputFieldValueString);
     return inputFieldValue;
-};
+}
 
 function getTextElementValueById(elementId){
     const textElement = document.getElementById(elementId);
@@ -13,15 +13,16 @@ function getTextElementValueById(elementId){
     const textElementValue  = parseFloat(textElementValueString);
     return textElementValue;
     
-};
+}
 
 function setTextElementValueById(elementId, newValue){
       const textElement = document.getElementById(elementId);
       textElement.innerText = newValue;
-};
+}
 
 function buttonDisable(btn){
     const playerBtn = document.getElementById(btn);
     playerBtn.disabled = true;
     playerBtn.style.background = '#777'
-};
+}
+

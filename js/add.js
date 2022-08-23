@@ -1,31 +1,25 @@
-
 const cartArray = [];
-
-
-
 function display (cartPlayer){
-
 // console.log(cartPlayer);
 const tableBody = document.getElementById('cart-players');
 tableBody.innerHTML = '';
 
 for(let i = 0; i < cartPlayer.length; i++){
-   const name = cartArray[i].playerName;
+    const name = cartArray[i].playerName;
     const tr = document.createElement('tr');
-
+    
     tr.innerHTML = `
     <th>${i + 1}</th>
     <th>${name}</th>
     `;
     tableBody.appendChild(tr)  
-}
-
-if(cartArray.length > 5){
-alert('Please Stop! No More Chance for You, Thanks!');
-}
-
 };
 
+if(cartArray.length > 5){
+    alert ('Please Stop! No More Chance for You, Thanks!');
+    return;
+   }
+}
 
 
 function addToCart (element){ 
@@ -40,7 +34,6 @@ function addToCart (element){
      document.getElementById('total-added-player').innerText = cartArray.length;
      
      display(cartArray);
-
 
     };  
 

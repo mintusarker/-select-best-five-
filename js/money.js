@@ -18,7 +18,7 @@ document.getElementById('btn-total').addEventListener('click', function(){
     const final = managerInputField + coachInputField + playerTotalNumber;
 
     setTextElementValueById('total-cost', final)
-});
+})
 
 // button disable---->
 
