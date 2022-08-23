@@ -1,34 +1,4 @@
-
-// // funtion declare---->
-
-// function getInputFieldValueById(inputFieldId){
-//     const inputField = document.getElementById(inputFieldId);
-//     const inputFieldValueString = inputField.value;
-//     const inputFieldValue = parseFloat(inputFieldValueString);
-//     inputField.value = '';
-//     return inputFieldValue;
-// }
-
-// function getTextElementValueById(elementId){
-//     const textElement = document.getElementById(elementId);
-//     const textElementValueString = textElement.innerText;
-//     const textElementValue  = parseFloat(textElementValueString);
-//     return textElementValue;
-    
-// }
-
-// function setTextElementValueById(elementId, newValue){
-//       const textElement = document.getElementById(elementId);
-//       textElement.innerText = newValue;
-// }
-
-// function buttonDisable(btn){
-//     const playerBtn = document.getElementById(btn);
-//     playerBtn.disabled = true;
-//     playerBtn.style.background = '#777'
-// }
-  
-// player calculate----->
+  // player calculate----->
 
 document.getElementById('btn-calculate').addEventListener('click', function(){
     const playerInputField = getInputFieldValueById('player-input');
@@ -50,7 +20,7 @@ document.getElementById('btn-total').addEventListener('click', function(){
     setTextElementValueById('total-cost', final)
 })
 
-// button disable----
+// button disable---->
 
 document.getElementById('btn-disabled1').addEventListener('click', function(){
     buttonDisable('btn-disabled1');})

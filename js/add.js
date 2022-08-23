@@ -15,9 +15,12 @@ for(let i = 0; i < cartPlayer.length; i++){
     <th>${i + 1}</th>
     <th>${name}</th>
     `;
-    tableBody.appendChild(tr)
+    tableBody.appendChild(tr)  
 }
 
+if(cartArray.length > 5){
+    alert ('Please Stop! Not More Chance for You, Thanks!');
+}      
 };
 
 
@@ -27,16 +30,12 @@ function addToCart (element){
     const playerObj = {
         playerName: playerName
      }  
+
      cartArray.push(playerObj)
      // console.log(cartArray.length)    
      document.getElementById('total-added-player').innerText = cartArray.length;
      
      display(cartArray);
 
-   
-    
-    // const btn = document.getElementById('btn-disabled1')
-    // btn.disabled = true;
-    // btn.style.background = '#777'
-}
+    };  
 
