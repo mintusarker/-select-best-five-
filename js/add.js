@@ -1,6 +1,8 @@
 
 const cartArray = [];
 
+
+
 function display (cartPlayer){
 
 // console.log(cartPlayer);
@@ -19,9 +21,11 @@ for(let i = 0; i < cartPlayer.length; i++){
 }
 
 if(cartArray.length > 5){
-    alert ('Please Stop! Not More Chance for You, Thanks!');
-}      
+alert('Please Stop! No More Chance for You, Thanks!');
+}
+
 };
+
 
 
 function addToCart (element){ 
@@ -36,6 +40,7 @@ function addToCart (element){
      document.getElementById('total-added-player').innerText = cartArray.length;
      
      display(cartArray);
+
 
     };  
 

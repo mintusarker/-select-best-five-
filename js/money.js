@@ -5,7 +5,7 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
     const playerTotalNumber = getTextElementValueById('player-total');
     const playerCost = playerInputField * cartArray.length;
     setTextElementValueById('player-total', playerCost);
-})
+});
 
 // calculate total------>
 
@@ -18,7 +18,7 @@ document.getElementById('btn-total').addEventListener('click', function(){
     const final = managerInputField + coachInputField + playerTotalNumber;
 
     setTextElementValueById('total-cost', final)
-})
+});
 
 // button disable---->
 
